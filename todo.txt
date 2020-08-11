@@ -1,0 +1,7 @@
+1. There should be a button for each store location.
+2. Each store button should display the name of the location.
+3. Clicking a value passes a function to a function.
+4. A map chooser function returns an image file based on input given to it.
+5. When no input is given to the map chooser function, it returns a default image file name.
+6. When bad is given to the map chooser function, it returns a default image file name.
+
