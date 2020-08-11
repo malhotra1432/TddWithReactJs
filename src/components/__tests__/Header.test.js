@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render} from '@testing-library/react';
 import Header from '../header/Header';
+import ReactDOM from "react-dom";
+import App from "../../containers/App";
 
-test('renders learn react link', () => {
-    const { getByText } = render(<Header />);
-    const linkElement = getByText(/header/i);
-    expect(linkElement).toBeInTheDocument();
+describe("Header", () => {
+    it('should render Header component', function () {
+        const div = document.createElement("div");
+        ReactDOM.render(<Header/>, div);
+    });
 });
