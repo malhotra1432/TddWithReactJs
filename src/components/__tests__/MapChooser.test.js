@@ -1,16 +1,11 @@
 import React from 'react';
-import {render} from '@testing-library/react';
 import MapChooser from '../mapChooser/MapChooser';
-import ReactDOM from "react-dom";
-import App from "../../containers/App";
+import {shallow} from "enzyme";
 
 describe("MapChooser", () => {
 
-    describe("MapChooser", () => {
-        it('should render MapChooser component', function () {
-            const div = document.createElement("div");
-            ReactDOM.render(<MapChooser/>, div);
-        });
+    it('should render MapChooser component', function () {
+        let mountedStoreLocator = shallow(<MapChooser />);
     });
 
     it('should return an image file based on input given', () => {
