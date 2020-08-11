@@ -4,6 +4,6 @@ import {shallow} from "enzyme";
 
 describe("Header", () => {
     it('should render Header component', function () {
-        let mountedStoreLocator = shallow(<Header />);
+        let mountedHeader = shallow(<Header />);
     });
 });
