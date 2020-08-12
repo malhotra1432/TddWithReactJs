@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css';
-import Header from "../components/header/Header";
+import StoreLocator from "./storeLocator/StoreLocator";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <StoreLocator />
     </div>
   );
 }
