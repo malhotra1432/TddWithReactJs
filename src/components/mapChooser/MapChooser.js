@@ -1,13 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
 
 function MapChooser(locationName) {
   if (!locationName) {
-    let imageName = 'default' + '.png';
-    return imageName;
+    return 'default' + '.png';
   } else {
-    let imageName = locationName + '.png';
-    return imageName;
+    return locationName + '.png';
   }
 }
 
