@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import StoreLocator from "./storeLocator/StoreLocator";
+import StoreLocator from './storeLocator/StoreLocator';
 
 function App() {
   return (
