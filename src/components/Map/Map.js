@@ -1,10 +1,11 @@
 import React, {Component} from "react";
+import './map.css'
 
 class Map extends Component{
     render() {
         return(
-            <div>
-                <img src="default.png" />
+            <div className="mapClass">
+                <img src="images/none.jpg" alt="no img found"/>
             </div>
         )
     }

@@ -2,11 +2,9 @@ import React from 'react';
 
 function Header() {
     return (
-        <div className="header">
-            <div>
-                Header
-            </div>
-        </div>
+
+            <img src="images/wired_brain_coffee.png" alt="no logo found"/>
+
     )
 }
 

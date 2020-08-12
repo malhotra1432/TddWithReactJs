@@ -16,4 +16,9 @@ describe("Map", () => {
         const img = mountedMap.find('img');
         expect(img.length).toBe(1);
     });
+
+    it('should contain default image if no parameter passed',  () => {
+        const defaultImg = mountedMap.find('img');
+        expect(defaultImg.getElement(0).props.src).toEqual('images/none.jpg')
+    });
 });
