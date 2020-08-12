@@ -24,8 +24,30 @@ describe('When a location is passed to it', () => {
 
   beforeEach(() => {
     props = {
-      location: 'location1',
+      location: 'Location',
     };
     mountedButton = shallow(<Button {...props} />);
+  });
+
+  it('should display the location', function () {
+    const locName = mountedButton.find('.location-button');
+    expect(locName.text()).toEqual('Location');
+  });
+});
+
+describe('When a location is undefined', () => {
+  let mountedButton;
+  let props;
+
+  beforeEach(() => {
+    props = {
+      location: undefined,
+    };
+    mountedButton = shallow(<Button {...props} />);
+  });
+
+  it('should display the all the locations', function () {
+    const locName = mountedButton.find('.location-button');
+    expect(locName.text()).toEqual('All locations');
   });
 });
