@@ -4,15 +4,35 @@ import Button from '../../components/button/Button';
 import Map from '../../components/Map/Map';
 
 class StoreLocator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentMap: 'none.jpg',
+    };
+    this.shops = [
+      {
+        location: 'Portland',
+        address: '123 Portland Drive',
+      },
+      {
+        location: 'Astoria',
+        address: '123 Astoria Drive',
+      },
+      {
+        location: '',
+        address: '',
+      },
+    ];
+  }
   render() {
+    let storButtons = this.shops.map((shop, id) => {
+      return <Button key={id} location={shop.location} />;
+    });
     return (
       <div className="storeLocator">
         <Header />
-        <div>
-          <Button />
-          <Button />
-        </div>
-        <Map />
+        <div>{storButtons}</div>
+        <Map imageName={this.state.currentMap} location={this.props.location} />
       </div>
     );
   }

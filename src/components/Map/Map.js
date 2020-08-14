@@ -3,9 +3,15 @@ import './map.css';
 
 class Map extends Component {
   render() {
+    let imagePath;
+    if (this.props.imageName) {
+      imagePath = 'images/' + this.props.imageName;
+    } else {
+      imagePath = 'none.jpg';
+    }
     return (
       <div className="mapClass">
-        <img src="images/none.jpg" alt="no img found" />
+        <img src={imagePath} alt={this.props.location} />
       </div>
     );
   }

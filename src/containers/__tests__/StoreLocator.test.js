@@ -20,7 +20,7 @@ describe('storeLocator', () => {
 
   it('should render Button component', () => {
     const buttons = mountedStoreLocator.find('Button');
-    expect(buttons.length).toBe(2);
+    expect(buttons.length).toBe(3);
   });
 
   it('should render Map component', () => {

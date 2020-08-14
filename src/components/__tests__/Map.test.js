@@ -4,8 +4,13 @@ import Map from '../Map/Map';
 
 describe('Map', () => {
   let mountedMap;
+  let props;
   beforeEach(() => {
-    mountedMap = shallow(<Map />);
+    props = {
+      location: undefined,
+      imageName: 'testmap.jpg',
+    };
+    mountedMap = shallow(<Map {...props} />);
   });
 
   it('should render Map component', () => {
@@ -17,8 +22,14 @@ describe('Map', () => {
     expect(img.length).toBe(1);
   });
 
-  it('should contain default image if no parameter passed', () => {
-    const defaultImg = mountedMap.find('img');
-    expect(defaultImg.getElement(0).props.src).toEqual('images/none.jpg');
+  it('should display default image if no parameter passed', () => {
+    let defaultMap = shallow(<Map />);
+    const defaultImg = defaultMap.find('img');
+    expect(defaultImg.length).toBe(1);
+  });
+
+  it('should display map image name passed to it', function () {
+    const testImg = mountedMap.find('img');
+    expect(testImg.getElement(0).props.src).toEqual('images/testmap.jpg');
   });
 });
