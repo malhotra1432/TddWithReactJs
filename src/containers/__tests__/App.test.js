@@ -1,7 +1,6 @@
 import React from 'react';
 import App from '../App';
 import { shallow } from 'enzyme';
-import StoreLocator from '../storeLocator/StoreLocator';
 
 describe('App', () => {
   let mountedApp;
@@ -10,11 +9,10 @@ describe('App', () => {
   });
 
   it('should render APP component', () => {
-    let mountedApp = shallow(<App />);
+    shallow(<App />);
   });
 
   it('should render APP component', () => {
-    let mountedApp = shallow(<App />);
     const locators = mountedApp.find('StoreLocator');
     expect(locators.length).toBe(1);
   });

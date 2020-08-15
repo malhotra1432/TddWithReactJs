@@ -7,7 +7,7 @@ class Map extends Component {
     if (this.props.imageName) {
       imagePath = 'images/' + this.props.imageName;
     } else {
-      imagePath = 'none.jpg';
+      imagePath = 'none.png';
     }
     return (
       <div className="mapClass">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import StoreLocator from '../storeLocator/StoreLocator';
-import Header from '../../components/header/Header';
 
 describe('storeLocator', () => {
   let mountedStoreLocator;
@@ -10,7 +9,7 @@ describe('storeLocator', () => {
   });
 
   it('should render Store Locator component', () => {
-    let mountedStoreLocator = shallow(<StoreLocator />);
+    shallow(<StoreLocator />);
   });
 
   it('should render Header component', () => {
@@ -26,5 +25,16 @@ describe('storeLocator', () => {
   it('should render Map component', () => {
     const maps = mountedStoreLocator.find('Map');
     expect(maps.length).toBe(1);
+  });
+});
+
+describe('chooseMap', () => {
+  it('should update this.state.currentLocation passed to it', () => {
+    let mountedStoreLocator = shallow(<StoreLocator />);
+    let mockEvent = { target: { value: 'testland' } };
+    mountedStoreLocator.instance().chooseMap(mockEvent);
+    expect(mountedStoreLocator.instance().state.currentMap).toBe(
+      'testland.png'
+    );
   });
 });

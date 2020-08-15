@@ -9,7 +9,7 @@ describe('Button', () => {
   });
 
   it('should render Store Locator component', () => {
-    let mountedButton = shallow(<Button />);
+    shallow(<Button />);
   });
 
   it('should render a button', () => {
@@ -49,5 +49,14 @@ describe('When a location is undefined', () => {
   it('should display the all the locations', function () {
     const locName = mountedButton.find('.location-button');
     expect(locName.text()).toEqual('All locations');
+  });
+
+  it('should call a function passed to it when clicked', function () {
+    const mockCallback = jest.fn();
+    const mounntedButtonWithCallback = shallow(
+      <Button handleClick={mockCallback} />
+    );
+    mounntedButtonWithCallback.find('button').simulate('click');
+    expect(mockCallback.mock.calls.length).toEqual(1);
   });
 });

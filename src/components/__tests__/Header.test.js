@@ -9,7 +9,7 @@ describe('Header', () => {
   });
 
   it('should render Header component', () => {
-    let mountedHeader = shallow(<Header />);
+    shallow(<Header />);
   });
 
   it('should set logo image src correctly', () => {

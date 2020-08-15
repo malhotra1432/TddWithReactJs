@@ -1,8 +1,7 @@
-import React from 'react';
-
 function MapChooser(locationName) {
   if (!locationName) {
-    return 'default' + '.png';
+    locationName = 'none';
+    return locationName + '.png';
   } else {
     return locationName + '.png';
   }

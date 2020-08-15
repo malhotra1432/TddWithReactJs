@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 describe('MapChooser', () => {
   it('should render MapChooser component', function () {
-    let mountedMapChooser = shallow(<MapChooser />);
+    shallow(<MapChooser />);
   });
 
   it('should return an image file based on input given', () => {

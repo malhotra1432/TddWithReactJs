@@ -14,7 +14,7 @@ describe('Map', () => {
   });
 
   it('should render Map component', () => {
-    let mountedMap = shallow(<Map />);
+    shallow(<Map />);
   });
 
   it('should contain an image', () => {
